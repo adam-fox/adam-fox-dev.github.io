@@ -1,254 +1,277 @@
 <!DOCTYPE html>
-<html manifest="http://adamfox.com/cache.manifest">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable = no" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-	<meta name="viewport" content="width=device-width" />
-	<meta property="og:title" content="The Portfolio of Adam Fox"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://adamfox.com"/>
-	<meta property="og:image" content="http://adamfox.com/img/icon_fb.jpg"/>
-	<meta property="og:site_name" content="adamfox.com"/>
-	<meta property="og:description" content="A web designer/front-end developer for nearly a decade. I have a passion for creativity, user experience and web standards."/>
-	<title>The Portfolio of Adam Fox</title>
-	<link rel="stylesheet" href="css/screen.css" type="text/css" />
-	<link rel="stylesheet" href="http://fast.fonts.com/cssapi/469ed2c6-a15e-499b-b713-4a69d7c4f7d2.css" type="text/css" />
-	<link rel="icon" type="image/png" href="http://adamfox.com/favicon.png">
-	<link rel="apple-touch-icon-precomposed" href="http://adamfox.com/iosicon.png"/> 
-	<script src="js/jquery.min.js" type="text/javascript"></script>
-	<script src="js/jquery-ui.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="js/scrollfix.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
-	<script src="js/respond.min.js"></script>
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-32805030-1']);
-		_gaq.push(['_setDomainName', 'adamfox.com']);
-		_gaq.push(['_trackPageview']);
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#252724" />
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>The Portfolio of Adam Fox</title>
 		
-		(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-</head>
-<body>
-	<header>
-		<div class="c320">
-			<h1>Adam<span class="orange">Fox</span></h1>
-		</div>
-		<nav>
-			<a href="javascript://" id="btn_contact">contact</a><div class="diagonal"></div>
-			<a href="javascript://" id="btn_resume">r&eacute;sum&eacute;</a><div class="diagonal"></div>
-			<a href="javascript://" id="btn_work">work</a>
-		</nav>
-	</header>
-	<div class="main">
-		<div class="c320">
-			<h3>About Me</h3>
-			<p>A web designer/front-end developer for nearly a decade. I have a passion for creativity, user experience and web standards. I currently reside in Chicago, IL.</p>
-			<a href="http://twitter.com/ajosefox" target="_blank" class="twitter">@ajosefox</a>
-		</div>
-		<div class="col_right">
-			<div id="slideshow">
-				<div id="slide1">
-					<div class="left">
-						<h1>Mobile Design</h1>
-						<h2>Hilton iPad Checklist</h2>
-						<p>A simple, intuitive checklist app designed to make opening a new hotel a quick and efficient process.<span><a id="featured01" href="javascript://">See more</a></span></p>
-					</div>
-					<div class="right">
-						<img src="img/featured01.png" alt="Hilton To Do - iPad" />
-					</div>
-				</div>
-				<div id="slide2">
-					<div class="left">
-						<h1>Responsive Design</h1>
-						<h2>Corona Summer 2012</h2>
-						<p>A mobile &amp; desktop site in one. The content responds to the size of your viewport.<span><a id="featured02" href="javascript://">See more</a></span></p>
-					</div>
-					<div class="right">
-						<img src="img/featured02.png" alt="Corona Summer 2012" />
-					</div>
-				</div>
-				<div id="slide3">
-					<div class="left">
-						<h1>UI/UX Design</h1>
-						<h2>Generator by Upshot</h2>
-						<p>Generator gives you easy access to your network files through a familiar, desktop-like interface.<span><a id="featured03" href="javascript://">See more</a></span></p>
-					</div>
-					<div class="right">
-						<img src="img/featured03.png" alt="Generator" />
-					</div>
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Montserrat:200,300,400,400i,700,800" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
+		<link href="css/adamfox.css" rel="stylesheet">
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	</head>
+	<body>
+		<header>
+			<div class="wrapper">
+				<div id="logo_af"></div>
+				<nav>
+					<ul>
+						<li><a href="https://www.linkedin.com/in/faxmado/" target="_blank">LinkedIn</a></li>
+						<li><a href="https://dribbble.com/adamfox" target="_blank">Dribbble</a></li>
+						<li><a href="javascript:void(0)"><strong>Get in Touch</strong></a></li>
+					</ul>
+					<a href="javascript:void(0)" class="btn_menu">
+						<div class="center"></div>
+						<div class="left"></div>
+						<div class="right"></div>
+						MENU
+					</a>
+				</nav>
+			</div>
+			<div class="wrapper">
+				<div id="logo_circle"></div>
+			</div>
+		</header>
+		<main>
+			<div class="wrapper">
+				<div>
+					<section class="about">
+						<h1>ADAM FOX</h1>
+						<p>Crafting best-in-class designs and experiences for screens of any size.</p>
+						<a href="javascript:void(0)" class="btn main">Get in Touch</a>
+					</section>
+					<section class="details">
+						<h2>About</h2>
+						<ul>
+							<li><h2>Current Role</h2>Associate Creative Director</li>
+							<li><h2>Location</h2>Chicago or Remote</li>
+							<li><h2>Experience</h2>12 Years</li>
+							<li><h2>Areas of Expertise</h2>UX Design and Front-End Dev</li>
+						</ul>
+					</section>
 				</div>
 			</div>
-			<h4 class="work">Work</h4>
-			<div id="fix100">
-				<div id="project">
-					<!--DYNAMIC CONTENT-->
-				</div>
-				<div id="work">
-					<a href="javascript://" id="project01">
-						<h1>The BIG Deal App</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project01/thumb.jpg" alt="The BIG Deal App" />
-					</a>
-					<a href="javascript://" id="project02">
-						<h1>Podium: Hilton Worldwide</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project02/thumb.jpg" alt="Podium: Hilton Worldwide" />
-					</a>
-					<a href="javascript://" id="project03">
-						<h1>Corona Getaway Photo Contest</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project03/thumb.jpg" alt="Corona Getaway Photo Contest" />
-					</a>
-					<a href="javascript://" id="project04">
-						<h1>Coupon Cabin iPhone App</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project04/thumb.jpg" alt="Coupon Cabin iPhone App" />
-					</a>
-					<a href="javascript://" id="project05">
-						<h1>SXSW Trending Sessions</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project05/thumb.jpg" alt="SXSW Trending Sessions" />
-					</a>
-					<a href="javascript://" id="project06">
-						<h1>Reachmail</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project06/thumb.jpg" alt="Reachmail" />
-					</a>
-					<a href="javascript://" id="project07">
-						<h1>Pizza Hut iPhone App</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project07/thumb.jpg" alt="Pizza Hut iPhone App" />
-					</a>
-					<a href="javascript://" id="project08">
-						<h1>Trackages</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project08/thumb.jpg" alt="Trackages" />
-					</a>
-					<a href="javascript://" id="project09">
-						<h1>Pixelmine Wordpress Plugin</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project09/thumb.jpg" alt="Pixelmine Wordpress Plugin" />
-					</a>
-					<a href="javascript://" id="project10">
-						<h1>Hilton Owner's<br />Conference</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project10/thumb.jpg" alt="Hilton Owner's Conference" />
-					</a>
-					<a href="javascript://" id="project11">
-						<h1>ShowPlace ICON Theatres</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project11/thumb.jpg" alt="ShowPlace ICON Theatres" />
-					</a>
-					<a href="javascript://" id="project12">
-						<h1>Pacifico USOS Mobile</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project12/thumb.jpg" alt="Pacifico USOS Mobile" />
-					</a>
-					<a href="javascript://" id="project13">
-						<h1>Modelo iPad Presentation</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project13/thumb.jpg" alt="Modelo iPad Presentation" />
-					</a>
-					<a href="javascript://" id="project14">
-						<h1>Corona Destination Football</h1>
-						<div class="border-fix"><!----></div>
-						<img src="img/projects/project14/thumb.jpg" alt="Corona Destination Football" />
-					</a>
-					<a href="javascript://" id="down">
-						<div class="border-fix">
-							<div class="down_arrow"><!--CSS ARROW--></div>
+			<div class="wrapper">
+				<h2>Work</h2>
+				<section class="work">
+					<div class="project">
+						<div>
+							<div>
+								<h3><a href="http://dribbble.com/adamfox" target="_blank">American Express Small Business<span class="new_window"></span></a></h3>
+								<h4>Design</h4>
+								<a href="javascript:void(0)">View on Dribbble</a>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
+							<div>
+								<span>Resize Viewport:</span><a href="javascript:void(0)" class="btn zoom minus">-</a><a href="javascript:void(0)" class="btn zoom plus">+</a>
+							</div>
 						</div>
-					</a>
-				</div>
-			</div>
-			<h4 class="resume">R&eacute;sum&eacute;</h4>
-			<div class="resume">
-				<div class="twothird">
-					<h5>Experience</h5>
-					<p><strong>Associate Creative Director</strong></p>
-					<p>Epsilon  //  West Chicago, IL  //  2013-Present</p>
-					<p><strong>Clients:</strong> <a href="http://www.conagrafoods.com" target="_blank">Conagra Foods</a> / <a href="http://fedex.com" target="_blank">FedEx</a> / <a href="http://pepsico.com" target="_blank">PepsiCo</a> / <a href="http://pernod-ricard.com/" target="_blank">Pernod Richard</a></p>
-					<br />
-					<p><strong>User Interface Engineer</strong></p>
-					<p>Aggrego  //  Chicago, IL  //  2012-2013</p>
-<p><strong>Clients:</strong> <a href="http://www.suntimes.com/" target="_blank">Chicago Sun-Times</a></p><br />
-					<p><strong>Senior Interactive Art Director</strong></p>
-					<p>Upshot  //  Chicago, IL  //  2010-2012</p>
-					<p><strong>Clients:</strong> <a href="http://crownimportsllc.com" target="_blank">Crown Imports</a> / <a href="http://disneyvacationclub.disney.go.com" target="_blank">Disney Vacation Club</a> / <a href="http://gogoair.com" target="_blank">Gogo</a> / <a href="http://hiltonworldwide.com" target="_blank">Hilton Worldwide</a> / <a href="http://kerasotes.com" target="_blank">Kerasotas Theatres</a> / <a href="http://kraftfoodscompany.com" target="_blank">Kraft Foods</a> / <a href="http://newbalance.com" target="_blank">New Balance / <a href="http://ocedar.com" target="_blank">O-Cedar</a> / <a href="http://omron.com" target="_blank">Omron</a> / <a href="http://pg.com" target="_blank">Proctor &amp; Gamble</a> / <a href="http://ruffino.com" target="_blank">Ruffino</a> / <a href="http://subway.com" target="_blank">Subway</a></p>
-					<br />
-					<p><strong>Interactive Art Director</strong></p>
-					<p>Emerge Digital  //  Naperville, IL  //  2005-2010</p>
-					<p><strong>Clients:</strong> <a href="http://amerigas.com" target="_blank">AmeriGas</a> / <a href="http://bk.com" target="_blank">Burger King</a> / <a href="http://cirquedesoleil.com" target="_blank">Cirque de Soleil</a> / <a href="http://consumerreports.com" target="_blank">Consumer Reports</a> / <a href="http://hbo.com" target="_blank">HBO</a> / <a href="http://heinz.com" target="_blank">Heinz</a> / <a href="http://luxor.com" target="_blank">Luxor Hotel &amp; Casino</a> / <a href="http://millercoors.com" target="_blank">MillerCoors</a> / <a href="http://timeoutchicago.com" target="_blank">Time Out Chicago</a> / <a href="http://ur.com" target="_blank">United Rentals</a> / <a href="http://visa.com" target="_blank">Visa</a></p>
-					<h5>Education</h5>
-					<p><strong>BS Marketing</strong></p>
-					<p>Illinois State University  //  Normal, IL  //  2003-2005</p>
-					<p>Wabunsee Community College  //  Sugar Grove, IL  //  2000-2002</p>
-					<h5>Skill Set</h5>
-					<p><strong>Directing</strong></p> 
-					<p>Web Development // Design // Photography // Retouching // Video</p>
-					<br />
-					<p><strong>Advanced Knowledge</strong></p>
-					<p>Adobe CS6 // HTML5 // CSS3(SASS) // Javascript // WordPress // Powerpoint // Keynote</p>
-					<br />
-					<p><strong>Intermediate Knowledge</strong></p>
-					<p>Adobe After Effects // Adobe Fireworks // ActionScript // PHP // XML</p>
-					
-				</div>
-				<div class="onethird">
-					<h5>Areas of Expertise</h5>
-					<ul>
-						<li>Responsive Web Design &amp; Development</li>
-						<li>UI/UX and Application Design</li>
-						<li>Art Direction/Visual Design</li>
-						<li>Social Media Campaigns</li>
-						<li>Email Marketing</li>
-						<li>Rich Media/Digital Advertising</li>
-					</ul>
-					<h5>Accolades</h5>
-					<ul>
-						<li><strong>Marcom</strong> / Platinum / ShowPlace ICON Theatres</li>
-						<li><strong>Hermes</strong> / Gold / Pacifico USOS Mobile</li>
-						<li><strong>Hermes</strong> / Gold / Corona Beach Getaway</li>
-						<li><strong>Davey Award</strong> / Silver / MyVisa Desktop Widget</li>
-						<li><strong>Reggie</strong> / Bronze / Corona Beach Getaway</li>
-						<li><strong>Web Marketing Awards</strong> / Standard of Excellence / Gogo Teaser Website</li>
-						<li><strong>Web Marketing Awards</strong> / Outstanding Website / Emmi Caff&egrave; Latte Teaser Website</li>
-						<li><strong>Interactive Media Awards</strong> / Outstanding Achievement / HBO's Alzheimer's Project</li>
-						<li><strong>Interactive Media Awards</strong> / Outstanding Achievement / BidMillerLite.com</li>
-						<li><strong>Web Marketing Awards</strong> / Outstanding Achievement / BidMillerLite.com</li>
-					</ul>
-				</div>
-			</div>
-			<h4 class="contact">Contact</h4>
-			<div class="contact">
-				<form method="post" action="send.php" id="form_demo" name="demoform">
-					<p class="error_message" style="display:none;">Please correct the highlighted fields.</p>
-					<label for="name">Full Name</label>
-					<input type="text" name="name" id="name"/>
-					<label for="email">Email Address</label>
-					<input type="text" name="email" id="email" />
-					<label for="comment">Comments (optional)</label>
-					<textarea name="comment" id="comment"></textarea>
-					<input type="submit" name="submit" value="SUBMIT" id="btn_submit" />
-					<div class="message">
-						<p></p>
+						<div class="browser" id="project1">
+							<div class="buttons"></div>
+							<div class="address_bar"></div>
+							<img src="img/project-desktop_fedex.jpg" alt="FedEx">
+						</div>
 					</div>
-				</form>
+					<!-- <hr> -->
+					<div class="project">
+						<div>
+							<div>
+								<h3><a href="http://dribbble.com/adamfox" target="_blank">American Express Small Business<span class="new_window"></span></a></h3>
+								<h4>Design</h4>
+								<a href="javascript:void(0)">View on Dribbble</a>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
+							<div>
+								<span>Resize Viewport:</span><a href="javascript:void(0)" class="btn zoom minus">-</a><a href="javascript:void(0)" class="btn zoom plus">+</a>
+							</div>
+						</div>
+						<div class="browser" id="project1">
+							<div class="buttons"></div>
+							<div class="address_bar"></div>
+							<img src="img/project-desktop_fedex.jpg" alt="FedEx">
+						</div>
+					</div>
+					<!-- <hr> -->
+					<div class="project">
+						<div>
+							<div>
+								<h3><a href="http://dribbble.com/adamfox" target="_blank">American Express Small Business<span class="new_window"></span></a></h3>
+								<h4>Design</h4>
+								<a href="javascript:void(0)">View on Dribbble</a>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
+							<div>
+								<span>Resize Viewport:</span><a href="javascript:void(0)" class="btn zoom minus">-</a><a href="javascript:void(0)" class="btn zoom plus">+</a>
+							</div>
+						</div>
+						<div class="browser" id="project1">
+							<div class="buttons"></div>
+							<div class="address_bar"></div>
+							<img src="img/project-desktop_fedex.jpg" alt="FedEx">
+						</div>
+					</div>
+
+					<div class="project">
+						<div>
+							<div>
+								<h3><a href="http://dribbble.com/adamfox" target="_blank">American Express Small Business<span class="new_window"></span></a></h3>
+								<h4>Design</h4>
+								<a href="javascript:void(0)">View on Dribbble</a>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
+							<div>
+								<span>Resize Viewport:</span><a href="javascript:void(0)" class="btn zoom minus">-</a><a href="javascript:void(0)" class="btn zoom plus">+</a>
+							</div>
+						</div>
+						<div class="browser" id="project1">
+							<div class="buttons"></div>
+							<div class="address_bar"></div>
+							<img src="img/project-desktop_fedex.jpg" alt="FedEx">
+						</div>
+					</div>
+					<!-- <hr> -->
+					<div class="project">
+						<div>
+							<div>
+								<h3><a href="http://dribbble.com/adamfox" target="_blank">American Express Small Business<span class="new_window"></span></a></h3>
+								<h4>Design</h4>
+								<a href="javascript:void(0)">View on Dribbble</a>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
+							<div>
+								<span>Resize Viewport:</span><a href="javascript:void(0)" class="btn zoom minus">-</a><a href="javascript:void(0)" class="btn zoom plus">+</a>
+							</div>
+						</div>
+						<div class="browser" id="project1">
+							<div class="buttons"></div>
+							<div class="address_bar"></div>
+							<img src="img/project-desktop_fedex.jpg" alt="FedEx">
+						</div>
+					</div>
+					<!-- <hr> -->
+					<div class="project">
+						<div>
+							<div>
+								<h3><a href="http://dribbble.com/adamfox" target="_blank">American Express Small Business<span class="new_window"></span></a></h3>
+								<h4>Design</h4>
+								<a href="javascript:void(0)">View on Dribbble</a>
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
+							<div>
+								<span>Resize Viewport:</span><a href="javascript:void(0)" class="btn zoom minus">-</a><a href="javascript:void(0)" class="btn zoom plus">+</a>
+							</div>
+						</div>
+						<div class="browser" id="project1">
+							<div class="buttons"></div>
+							<div class="address_bar"></div>
+							<img src="img/project-desktop_fedex.jpg" alt="FedEx">
+						</div>
+					</div>
+					<div class="contact">
+						<a href="javascript:void(0)" class="btn main">Get in Touch</a>
+						<p><a href="http://dribbble.com/adamfox" target="_blank">Or see more of my work on <strong>Dribbble</strong>.<span class="new_window"></span></a></p>
+					</div>
+				</section>
+				<section class="experience">
+					<div>
+						<h2>Experience</h2>
+					</div>
+					<div class="clients">[ CLIENT LOGOS ]</div>
+					<div class="expertise">
+						<h3>Design</h3>
+						<ul>
+							<li class="expertise_75">User Experience</li>
+							<li class="expertise_75">User Interface</li>
+							<li class="expertise_75">Visual Design</li>
+							<li class="expertise_100">Web Design</li>
+						</ul>
+						<h3>Development</h3>
+						<ul>
+							<li class="expertise_100">HTML / CSS</li>
+							<li class="expertise_50">JS / JQuery</li>
+							<li class="expertise_25">PHP</li>
+							<li class="expertise_25">React.js</li>
+						</ul>
+						<h3>Direction</h3>
+						<ul>
+							<li class="expertise_100">Design</li>
+							<li class="expertise_75">Front-End</li>
+							<li class="expertise_50">Photo & Video</li>
+							<li class="expertise_25">Retouching</li>
+						</ul>
+						<h3>Software</h3>
+						<ul>
+							<li class="expertise_25">Framer</li>
+							<li class="expertise_100">Illustrator</li>
+							<li class="expertise_100">Photoshop</li>
+							<li class="expertise_75">Sketch</li>
+						</ul>
+						<div class="contact">
+							<a href="javascript:void(0)" class="btn main">Get in Touch</a>
+							<p><a href="https://www.linkedin.com/in/faxmado/" target="_blank">Or learn more about me on <strong>LinkedIn</strong>.<span class="new_window"></span></a></p>
+						</div>
+					</div>
+					<div class="history">
+						<ul>
+							<li>
+								<div>2013 - Present</div>
+								<div>Associate Creative Director</div>
+								<div>Epsilon</div>
+							</li>
+							<li>
+								<div>2012 - 2013</div>
+								<div>User Interface Engineer</div>
+								<div>Aggrego</div>
+							</li>
+							<li>
+								<div>2009 - 2012</div>
+								<div>Senior Interactive Art Director</div>
+								<div>Upshot</div>
+							</li>
+							<li>
+								<div>2006 - 2009</div>
+								<div>Interactive Art Director</div>
+								<div>Emerge Digital</div>
+							</li>
+							<li>
+								<div>2005</div>
+								<div>Bachelor of Science, Marketing</div>
+								<div>Illinois State University</div>
+							</li>
+						</ul>
+					</div>
+					<div class="contact">
+						<a href="javascript:void(0)" class="btn main">Get in Touch</a>
+						<p><a href="https://www.linkedin.com/in/faxmado/" target="_blank">Or learn more about me on <strong>LinkedIn</strong>.<span class="new_window"></span></a></p>
+					</div>
+				</section>
 			</div>
-			<footer>
-				<p>&copy;2017 Adam Fox</p>
-			</footer>
-		</div>
-	</div>
-</body>
+		</main>
+		<footer>
+			<div class="logo_af"></div>
+			<p>Want to know more about me?</p>
+			<p>I write on <a href="https://medium.com/@adamfox" target="_blank">Medium</a>, test on <a href="https://codepen.io/adamfox/" target="_blank">CodePen</a> and occasionally run my mouth on <a href="https://twitter.com/faxmado" target="_blank">Twitter</a>. Check out my code for this site on <a href="https://github.com/adam-fox/adam-fox.github.io" target="_blank">Github</a>.</p>
+			<p>&copy; 2017 Adam Fox</p>
+		</footer>
+		<div id="bg_main"></div>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+	    <script src="js/okshadow.min.js"></script>
+	    <script src="js/adamfox.js"></script>
+		<script>
+		</script>
+	</body>
 </html>
