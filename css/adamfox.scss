@@ -38,7 +38,7 @@ $xl-width: 1200px;
 html, body {
 	margin: 0;
 	padding: 0;
-	background: $color-primary;
+	background: darken($color-primary,  5%);
 	font-family: $font-sans;
 	color: $color-secondary;
 	height: 200%;
@@ -896,12 +896,29 @@ html, body {
 		position: fixed;
 		width: 100vw;
 		height: 100vh;
-		background: url('../img/bg_main.jpg');
-		background-size: cover;
-		background-position-x: center;
 		z-index: 0;
 		pointer-events: none;
 		display: block;
+		
+		&:before, &:after {
+			position: absolute;
+			content: "";
+			width: 200vw;
+			height: 200vh;
+			background-image: url("../img/af_pattern.svg");
+			background-size: 300vw;
+			opacity: .75;
+		}
+		
+		&:before {
+			transform: translate(0, 0);
+			animation: animatedAF1 240s linear infinite;
+		}
+		
+		&:after {
+			transform: translate(-100vw, -100vh);
+			animation: animatedAF2 240s linear infinite;
+		}
 
 	}
 
@@ -2618,6 +2635,16 @@ footer {
 // *******************
 // KEYFRAME ANIMATIONS
 // *******************
+
+@keyframes animatedAF1 {
+	0% { transform: translate(0vw, 0vh); }
+	100% { transform: translate(-100vw, -100vh); }
+}
+
+@keyframes animatedAF2 {
+	0% { transform: translate(-100vw, -100vh); }
+	100% { transform: translate(50vw, 50vh); }
+}
 
 @keyframes logo {
     0% {

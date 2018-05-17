@@ -105,11 +105,11 @@ $(window).scroll(function() {
 	
 	if($("header").offset().top - $(window).scrollTop() <= 0) {
 		$("header").addClass("on");
-		$('#bg_main').fadeOut(1000);
+// 		$('#bg_main').fadeOut(1000);
 	} 
 	if($(window).scrollTop() <= 0) {
 		$("header").removeClass("on");
-		$('#bg_main').fadeIn();
+// 		$('#bg_main').fadeIn();
 	}
 });
 
