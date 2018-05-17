@@ -4162,15 +4162,15 @@ html, body {
       content: "";
       width: 200vw;
       height: 200vh;
-      background-image: url("../img/af_pattern.svg");
-      background-size: 500vmax;
-      opacity: .75; }
+      background-size: 500vmax; }
     html #bg_main:before, body #bg_main:before {
-      transform: translate(0, 0);
-      animation: animatedAF1 240s linear infinite; }
+      animation: animatedAF1 60s linear infinite;
+      background-image: url("../img/af_pattern_dark.svg");
+      opacity: .5; }
     html #bg_main:after, body #bg_main:after {
-      transform: translate(-100vw, -100vh);
-      animation: animatedAF2 240s linear infinite; }
+      animation: animatedAF2 60s linear infinite;
+      background-image: url("../img/af_pattern_light.svg");
+      opacity: .5; }
   html #test, body #test {
     opacity: 0;
     top: 0;
@@ -5267,15 +5267,19 @@ footer {
 */
 @keyframes animatedAF1 {
   0% {
-    transform: translate(0vw, 0vh); }
+    transform: translate(-200px, -200px); }
+  50% {
+    transform: translate(-400px, -400px); }
   100% {
-    transform: translate(-100vw, -100vh); } }
+    transform: translate(-200px, -200px); } }
 
 @keyframes animatedAF2 {
   0% {
-    transform: translate(-100vw, -100vh); }
+    transform: translate(-200px, -200px); }
+  50% {
+    transform: translate(0px, 0px); }
   100% {
-    transform: translate(50vw, 50vh); } }
+    transform: translate(-200px, -200px); } }
 
 @keyframes logo {
   0% {
