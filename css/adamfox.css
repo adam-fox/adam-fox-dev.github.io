@@ -3596,7 +3596,7 @@ readers do not read off random characters that represent icons */
 html, body {
   margin: 0;
   padding: 0;
-  background: #181a23;
+  background: #222632;
   font-family: "Montserrat", sans-serif;
   color: white;
   height: 200%;
@@ -4893,7 +4893,7 @@ main {
 footer {
   background: #181a23;
   padding: 60px 0;
-  z-index: 0;
+  z-index: 1;
   position: relative;
   overflow: hidden; }
   footer > div {
