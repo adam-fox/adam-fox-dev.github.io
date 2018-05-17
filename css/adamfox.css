@@ -4163,7 +4163,7 @@ html, body {
       width: 200vw;
       height: 200vh;
       background-image: url("../img/af_pattern.svg");
-      background-size: 300vw;
+      background-size: 500vw;
       opacity: .75; }
     html #bg_main:before, body #bg_main:before {
       transform: translate(0, 0);
