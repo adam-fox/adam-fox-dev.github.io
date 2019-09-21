@@ -8,395 +8,58 @@
 		
 		<title>Adam Fox</title>
 		
-		<link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Montserrat:200,300,400,400i,700,800" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Montserrat:200,300,400,400i,700,800,900" rel="stylesheet">
 		<link href="css/adamfox.css" rel="stylesheet">
 		
-		<!-- Start of Async Drift Code -->
-		<script>
-		!function() {
-		  var t;
-		  if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0, 
-		  t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-		  t.factory = function(e) {
-		    return function() {
-		      var n;
-		      return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-		    };
-		  }, t.methods.forEach(function(e) {
-		    t[e] = t.factory(e);
-		  }), t.load = function(t) {
-		    var e, n, o, i;
-		    e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"), 
-		    o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js", 
-		    n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-		  });
-		}();
-		drift.SNIPPET_VERSION = '0.3.1';
-		drift.load('f3arm7ibrfx4');
-		</script>
-		<!-- End of Async Drift Code -->
-		<!-- place this script tag after the Drift embed tag -->
-		<script>
-		  (function() {
-		    /* Add this class to any elements you want to use to open Drift.
-		     *
-		     * Examples:
-		     * - <a class="drift-open-chat">Questions? We're here to help!</a>
-		     * - <button class="drift-open-chat">Chat now!</button>
-		     *
-		     * You can have any additional classes on those elements that you
-		     * would ilke.
-		     */
-		    var DRIFT_CHAT_SELECTOR = '.drift-open-chat'
-		    /* http://youmightnotneedjquery.com/#ready */
-		    function ready(fn) {
-		      if (document.readyState != 'loading') {
-		        fn();
-		      } else if (document.addEventListener) {
-		        document.addEventListener('DOMContentLoaded', fn);
-		      } else {
-		        document.attachEvent('onreadystatechange', function() {
-		          if (document.readyState != 'loading')
-		            fn();
-		        });
-		      }
-		    }
-		    /* http://youmightnotneedjquery.com/#each */
-		    function forEachElement(selector, fn) {
-		      var elements = document.querySelectorAll(selector);
-		      for (var i = 0; i < elements.length; i++)
-		        fn(elements[i], i);
-		    }
-		    function openSidebar(driftApi, event) {
-		      event.preventDefault();
-		      driftApi.sidebar.open();
-		      return false;
-		    }
-		    ready(function() {
-		      drift.on('ready', function(api) {
-		        var handleClick = openSidebar.bind(this, api)
-		        forEachElement(DRIFT_CHAT_SELECTOR, function(el) {
-		          el.addEventListener('click', handleClick);
-		        });
-
-		      });
-		    });
-		  })();
-		</script>
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 	</head>
 	<body>
-		<header>
-			<div class="wrapper">
-				<?xml version="1.0" encoding="UTF-8"?>
-				<svg class="logo_af" width="32px" height="28px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-				    <title>Adam Fox</title>
-				    <desc>AF Logo</desc>
-				    <defs></defs>
-				    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-				        <g id="Large-Devices-(-≥-1200px-)" transform="translate(-705.000000, -74.000000)" fill="#FFFFFF">
-				            <g id="HEADER" transform="translate(157.000000, 60.000000)">
-				                <g id="Group" transform="translate(534.000000, 0.000000)">
-				                    <polygon id="Page-1-Copy" points="30.0001891 14 29.4031219 15.0443395 27.7162844 17.9961467 23.0304985 26.1962444 21.9959351 28.0064583 14.5913952 40.9643981 14 42 15.1880842 42 18.6283101 42 19.0264809 42 19.2249991 41.6527733 24.3165184 32.7430262 29.4239191 41.6535331 29.6224373 42 30.02023 42 33.4604559 42 34.6504307 42 34.0563886 40.9640182 26.8288135 28.3460871 29.9998109 22.7969174 40.7746228 41.6527733 40.973141 42 41.3716899 42 44.8115377 42 46 42 45.4082267 40.9643981 30.5964999 15.0443395"></polygon>
-				                </g>
-				            </g>
-				        </g>
-				    </g>
-				</svg>
-				<nav>
-					<a href="javascript:void(0)" class="drift-open-chat"><span></span><strong>Say hi!</strong></a>
-				</nav>
-			</div>
-			<div class="wrapper">
-				<div class="logo_circle"></div>
-			</div>
-		</header>
+		<header></header>
 		<main>
-			<section id="about">
-				<div>
-					<h1>Adam Fox</h1>
-					<h2>Full-Stack Designer</h2>
-					<p>Crafting best-in-class experiences for screens of any size.</p>
-					<a href="javascript:void(0)" class="btn main">Learn More</a>
-				</div>
+			<section id="intro">
+				<h1>A<span>d</span>am <span>F</span><span>o</span>x</h1>
+				<h2>Full-Stack Designer</h2>
+				<p>Crafting best-in-class desgins &amp; experiences for screens of any size.</p>
+				<button type="button" title="Learn More">Learn More</button>
 			</section>
-			<section id="work">
-				<h2>Work</h2>
-				<div class="project desktop" id="project1">
-					<div class="description">
-						<h3>My FedEx Rewards</h3>
-						<h4>UX, UI &amp; visual design</h4>
-						<p>A rewards platform built from the ground up for FedEx that allows members earn points and receive discounts for shipping and printing with FedEx.<!--  <a href="https://dribbble.com" target="_blank" rel="noopener"><strong>More on Dribbble</strong><span class="new_window"></span></a> --></p>
-						<div class="resize">
-							<a href="javascript:void(0)" class="btn minus">-</a><span>Desktop</span><a href="javascript:void(0)" class="btn plus disabled">+</a>
-						</div>
+			<section id="projects">
+				<h3>Featured Projects</h3>
+				<div class="project-container">
+					<div class="project-description">
+						<p>Skills Used</p>
+						<h4>Project Title 1</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
 					</div>
-					<div>
-						<div class="browser">
-							<div class="buttons"></div>
-							<div class="address_bar"></div>
-							<div class="viewport">
-								<img src="img/project-desktop_fedex.jpg" class="desktop" alt="FedEx">
-								<img src="img/project-tablet_fedex.jpg" class="tablet" alt="FedEx">
-								<img src="img/project-mobile_fedex.jpg" class="mobile" alt="FedEx">
-							</div>
-						</div>
-						<div class="pagination">	
-							<a href="javascript:void(0)" class="on"></a>
-							<a href="javascript:void(0)"></a>
-							<a href="javascript:void(0)"></a>
+					<div class="project-images desktop">
+						<div>
+							<div></div>
 						</div>
 					</div>
 				</div>
-				<div class="project desktop" id="project2">
-					<div class="description">
-						<h3>American Express Corporate Cards</h3>
-						<h4>UX, UI &amp; visual design</h4>
-						<p>A proposed business credit card finder and savings calculator tool.<!--  <a href="https://dribbble.com" target="_blank" rel="noopener"><strong>More on Dribbble</strong><span class="new_window"></span></a> --></p>
-						<div class="resize">
-							<a href="javascript:void(0)" class="btn minus disabled">-</a><span>Desktop</span><a href="javascript:void(0)" class="btn plus disabled">+</a>
-						</div>
+				<div class="project-container">
+					<div class="project-description">
+						<p>Skills Used</p>
+						<h4>Project Title 2</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
 					</div>
-					<div>
-						<div class="browser">
-							<div class="buttons"></div><div class="address_bar"></div>
-							<div class="viewport">
-								<img src="img/project-desktop_amex.jpg" class="desktop" alt="American Express">
-							</div>
-						</div>
-						<div class="pagination">	
-<!--
-							<a href="javascript:void(0)" class="on"></a>
-							<a href="javascript:void(0)"></a>
--->
+					<div class="project-images mobile">
+						<div>
+							<div></div>
 						</div>
 					</div>
 				</div>
-				<div class="project mobile" id="project3">
-					<div class="description">
-						<h3>Foquos.com</h3>
-						<h4>UX, UI, visual design &amp; development</h4>
-						<p>Global, real-time earthquake data.<!--  <a href="https://dribbble.com" target="_blank" rel="noopener"><strong>More on Dribbble</strong><span class="new_window"></span></a> --></p>
-						<div class="resize">
-							<a href="javascript:void(0)" class="btn minus disabled">-</a><span>Mobile</span><a href="javascript:void(0)" class="btn plus">+</a>
+				<div class="project-container">
+					<div class="project-description">
+						<p>Skills Used</p>
+						<h4>Project Title 3</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non ornare erat. Integer convallis, leo in ullamcorper ultrices, leo justo egestas felis, sed facilisis nunc purus sed mauris.</p>
+					</div>
+					<div class="project-images tablet">
+						<div>
+							<div></div>
 						</div>
 					</div>
-					<div>
-						<div class="browser">
-							<div class="buttons"></div><div class="address_bar"></div>
-							<div class="viewport">
-								<img src="img/project-desktop_foquos.jpg" class="desktop" alt="Foquos">
-								<img src="img/project-mobile_foquos.jpg" class="mobile" alt="Foquos">
-							</div>
-						</div>
-						<div class="pagination">	
-							<a href="javascript:void(0)" class="on"></a>
-							<a href="javascript:void(0)"></a>
-						</div>
-					</div>
-				</div>
-				<div class="project desktop" id="project4">
-					<div class="description">
-						<h3>Power Plate</h3>
-						<h4>UI &amp; visual design</h4>
-						<p>A rewards platform built from the ground up for FedEx that allows members earn points and receive discounts for shipping and printing with FedEx.<!--  <a href="https://dribbble.com" target="_blank" rel="noopener"><strong>More on Dribbble</strong><span class="new_window"></span></a> --></p>
-						<div class="resize">
-							<a href="javascript:void(0)" class="btn minus disabled">-</a><span>Desktop</span><a href="javascript:void(0)" class="btn plus disabled">+</a>
-						</div>
-					</div>
-					<div>
-						<div class="browser">
-							<div class="buttons"></div><div class="address_bar"></div>
-							<div class="viewport">
-								<img src="img/project-desktop_powerplate.jpg" class="desktop" alt="Power Plate">
-							</div>
-						</div>
-						<div class="pagination">	
-							<a href="javascript:void(0)" class="on"></a>
-							<a href="javascript:void(0)"></a>
-							<a href="javascript:void(0)"></a>
-						</div>
-					</div>
-				</div>
-				<div class="project mobile" id="project5">
-					<div class="description">
-						<h3>ToDrive.com</h3>
-						<h4>UX, UI, visual design &amp; development</h4>
-						<p>A rewards platform built from the ground up for FedEx that allows members earn points and receive discounts for shipping and printing with FedEx.<!--  <a href="https://dribbble.com" target="_blank" rel="noopener"><strong>More on Dribbble</strong><span class="new_window"></span></a> --></p>
-						<div class="resize">
-							<a href="javascript:void(0)" class="btn minus disabled">-</a><span>Mobile</span><a href="javascript:void(0)" class="btn plus ">+</a>
-						</div>
-					</div>
-					<div>
-						<div class="browser">
-							<div class="buttons"></div><div class="address_bar"></div>
-							<div class="viewport">
-								<img src="img/project-desktop_todrive.jpg" class="desktop" alt="ToDrive.com">
-								<img src="img/project-mobile_todrive.jpg" class="mobile" alt="ToDrive.com">
-							</div>
-						</div>
-						<div class="pagination">	
-							<a href="javascript:void(0)" class="on"></a>
-							<a href="javascript:void(0)"></a>
-							<a href="javascript:void(0)"></a>
-						</div>
-					</div>
-				</div>
-				<div class="project tablet" id="project6">
-					<div class="description">
-						<h3>Frigo CheeseHeads</h3>
-						<h4>UI &amp; visual design</h4>
-						<p>A rewards platform built from the ground up for FedEx that allows members earn points and receive discounts for shipping and printing with FedEx.<!--  <a href="https://dribbble.com" target="_blank" rel="noopener"><strong>More on Dribbble</strong><span class="new_window"></span></a> --></p>
-						<div class="resize">
-							<a href="javascript:void(0)" class="btn minus">-</a><span>Tablet</span><a href="javascript:void(0)" class="btn plus">+</a>
-						</div>
-					</div>
-					<div>
-						<div class="browser">
-							<div class="buttons"></div><div class="address_bar"></div>
-							<div class="viewport">
-								<img src="img/project-desktop_frigo.jpg" class="desktop" alt="Frigo">
-								<img src="img/project-tablet_frigo.jpg" class="tablet" alt="Frigo">
-								<img src="img/project-mobile_frigo.jpg" class="mobile" alt="Frigo">
-							</div>
-						</div>
-						<div class="pagination">	
-<!--
-							<a href="javascript:void(0)" class="on"></a>
-							<a href="javascript:void(0)"></a>
-							<a href="javascript:void(0)"></a>
--->
-						</div>
-					</div>
-				</div>
-				<div id="test"></div>
-			</section>
-			<section id="experience">
-				<h2>Experience</h2>
-				<div class="clients">
-					<div></div>
-				</div>
-				<div class="expertise">
-					<h3>Design</h3>
-					<ul>
-						<li>Beg<span>inner</span></li>
-						<li>Int<span>ermediate</span></li>
-						<li>Adv<span>anced</span></li>
-					</ul>
-					<ul>
-						<li>User Experience<div class="expertise_4"></div></li>
-						<li>User Interface<div class="expertise_4"></div></li>
-						<li>Visual Design<div class="expertise_3"></div></li>
-						<li>Web Design<div class="expertise_5"></div></li>
-					</ul>
-					<h3>Development</h3>
-					<ul>
-						<li>HTML / CSS<div class="expertise_5"></div></li>
-						<li>JS / JQuery<div class="expertise_2"></div></li>
-						<li>PHP<div class="expertise_1"></div></li>
-						<li>React.js<div class="expertise_1"></div></li>
-					</ul>
-					<h3>Direction</h3>
-					<ul>
-						<li>Design<div class="expertise_4"></div></li>
-						<li>Front-End<div class="expertise_4"></div></li>
-						<li>Photo & Video<div class="expertise_3"></div></li>
-						<li>Retouching<div class="expertise_2"></div></li>
-					</ul>
-					<h3>Software</h3>
-					<ul>
-						<li>Framer<div class="expertise_1"></div></li>
-						<li>Illustrator<div class="expertise_5"></div></li>
-						<li>Photoshop<div class="expertise_4"></div></li>
-						<li>Sketch<div class="expertise_2"></div></li>
-					</ul>
-				</div>
-				<div class="history">
-					<ul>
-						<li>
-							<div>
-								<div>2013 - Present</div>
-								<div>Associate Creative Director</div>
-								<div>Epsilon</div>
-							</div>
-						</li>
-						<li>
-							<div>
-								<div>2012 - 2013</div>
-								<div>User Interface Engineer</div>
-								<div>Aggrego</div>
-							</div>
-						</li>
-						<li>
-							<div>
-								<div>2009 - 2012</div>
-								<div>Senior Interactive Art Director</div>
-								<div>Upshot</div>
-							</div>
-						</li>
-						<li>
-							<div>
-								<div>2006 - 2009</div>
-								<div>Interactive Art Director</div>
-								<div>Upshot</div>
-							</div>
-						</li>
-						<li>
-							<div>
-								<div>2005</div>
-								<div>Bachelor of Science, Marketing</div>
-								<div>Illinois State University</div>
-							</div>
-						</li>
-					</ul>
 				</div>
 			</section>
 		</main>
-		<footer>
-			<div>
-				<h3>Still curious?</h3>
-				<ul>
-					<li><a href="https://dribbble.com/adamfox" target="_blank" rel="noopener">See <span>more of</span> my work on <strong>Dribbble</strong><span class="new_window"></span></a></li>
-					<li><a href="https://www.linkedin.com/in/faxmado/" target="_blank" rel="noopener">Learn more <span>about me</span> on <strong>LinkedIn</strong><span class="new_window"></span></a></li>
-					<li><a href="https://github.com/adam-fox/adam-fox.github.io" target="_blank" rel="noopener">Check <span>out my code for</span> this site on <strong>Github</strong><span class="new_window"></span></a></li>
-					<li><a href="https://twitter.com/faxmado" target="_blank" rel="noopener">Follow me on <strong>Twitter</strong><span class="new_window"></span></a></li>
-				</ul>
-				<p>&copy; 2018 Adam Fox
-					<?xml version="1.0" encoding="UTF-8"?>
-					<svg width="21px" height="19px" viewBox="0 0 32 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-					    <title>Adam Fox</title>
-					    <desc>AF Logo</desc>
-					    <defs></defs>
-					    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-					        <g id="Large-Devices-(-≥-1200px-)" transform="translate(-705.000000, -74.000000)" fill="#FFFFFF">
-					            <g id="HEADER" transform="translate(157.000000, 60.000000)">
-					                <g id="Group" transform="translate(534.000000, 0.000000)">
-					                    <polygon id="Page-1-Copy" points="30.0001891 14 29.4031219 15.0443395 27.7162844 17.9961467 23.0304985 26.1962444 21.9959351 28.0064583 14.5913952 40.9643981 14 42 15.1880842 42 18.6283101 42 19.0264809 42 19.2249991 41.6527733 24.3165184 32.7430262 29.4239191 41.6535331 29.6224373 42 30.02023 42 33.4604559 42 34.6504307 42 34.0563886 40.9640182 26.8288135 28.3460871 29.9998109 22.7969174 40.7746228 41.6527733 40.973141 42 41.3716899 42 44.8115377 42 46 42 45.4082267 40.9643981 30.5964999 15.0443395"></polygon>
-					                </g>
-					            </g>
-					        </g>
-					    </g>
-					</svg>
-				</p>
-			</div>
-		</footer>
-		<div id="bg_main"></div>
-		
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.js"></script>
-	    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-<!-- 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> -->
-	    <script src="js/adamfox.js"></script>
 	</body>
 </html>
