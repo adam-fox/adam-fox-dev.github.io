@@ -7,13 +7,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 :root {
-  --dark-gray: #20222C;
-  --off-white: #F0F6FA;
+  --primary-color: #20222C;
+  --secondary-color: #F0F6FA;
+  --skills-desktop: 7.13%;
+  --box-shadow: 0px 50px 100px #000;
 }
 
 body {
-  background-color: var(--dark-gray);
-  color: var(--off-white);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
@@ -53,22 +55,22 @@ h3 {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 100;
-  border-bottom: 1px solid var(--off-white);
+  border-bottom: 1px solid var(--secondary-color);
   margin-bottom: 75px;
 }
 
 a {
-  color: var(--off-white);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
 button {
   background: none;
-  color: var(--off-white);
+  color: var(--secondary-color);
   font-weight: 800;
   text-transform: uppercase;
   font-size: 15px;
-  border: 3px solid var(--off-white);
+  border: 3px solid var(--secondary-color);
   padding: 15px 30px;
   letter-spacing: 1px;
   border-radius: 27px;
@@ -80,7 +82,7 @@ header {
   width: 58px;
   height: 58px;
   margin: 60px auto 0 auto;
-  border: 4px solid var(--off-white);
+  border: 4px solid var(--secondary-color);
   border-radius: 100%;
 }
 
@@ -188,7 +190,7 @@ main {
   margin: auto;
 }
 
-#projects .project-container {
+#projects .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
@@ -201,7 +203,7 @@ main {
   padding: 75px 0;
 }
 
-#projects .project-container .project-description {
+#projects .container .project-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -216,27 +218,27 @@ main {
       align-content: flex-start;
 }
 
-#projects .project-container .project-description p:nth-of-type(1) {
+#projects .container .project-description p:nth-of-type(1) {
   font-family: Lora, 'Times New Roman', Times, serif;
   font-style: italic;
   font-weight: 400;
   font-size: 1.125rem;
 }
 
-#projects .project-container .project-description h4 {
+#projects .container .project-description h4 {
   font-size: 1.875rem;
   text-transform: uppercase;
   margin: 10px 0;
 }
 
-#projects .project-container .project-description p {
+#projects .container .project-description p {
   font-size: .9375rem;
   line-height: 1.40625rem;
 }
 
-#projects .project-container .project-description a {
+#projects .container .project-description a {
   text-decoration: none;
-  color: var(--off-white);
+  color: var(--secondary-color);
   font-size: .9375rem;
   line-height: .9375rem;
   margin-top: 30px;
@@ -244,7 +246,7 @@ main {
   padding-left: 28px;
 }
 
-#projects .project-container .project-description a::before {
+#projects .container .project-description a::before {
   content: "";
   width: 22px;
   height: 18px;
@@ -256,52 +258,54 @@ main {
   left: 0;
 }
 
-#projects .project-container .project-description a:nth-of-type(1)::before {
+#projects .container .project-description a:nth-of-type(1)::before {
   background-image: url("../img/link-dribbble.png");
 }
 
-#projects .project-container .project-description a:nth-of-type(2)::before {
+#projects .container .project-description a:nth-of-type(2)::before {
   background-image: url("../img/link-figma.png");
 }
 
-#projects .project-container .project-description a:nth-of-type(3)::before {
+#projects .container .project-description a:nth-of-type(3)::before {
   background-image: url("../img/link-github.png");
 }
 
-#projects .project-container .project-images > div {
+#projects .container .project-images > div {
   margin: 0px auto;
 }
 
-#projects .project-container .project-images > div > div {
-  background-color: var(--off-white);
+#projects .container .project-images > div > div {
+  background-color: var(--secondary-color);
   border-radius: 20px;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
-#projects .project-container .project-images.desktop > div {
+#projects .container .project-images.desktop > div {
   width: 100%;
 }
 
-#projects .project-container .project-images.desktop > div > div {
+#projects .container .project-images.desktop > div > div {
   padding-top: calc(416.24 / 558 * 100%);
 }
 
-#projects .project-container .project-images.mobile > div {
+#projects .container .project-images.mobile > div {
   width: 41.39%;
 }
 
-#projects .project-container .project-images.mobile > div > div {
+#projects .container .project-images.mobile > div > div {
   padding-top: calc(416.24 / 231 * 100%);
 }
 
-#projects .project-container .project-images.tablet > div {
+#projects .container .project-images.tablet > div {
   width: 55.55%;
 }
 
-#projects .project-container .project-images.tablet > div > div {
+#projects .container .project-images.tablet > div > div {
   padding-top: calc(416.24 / 310 * 100%);
 }
 
-#projects .project-container:nth-child(even) .project-description {
+#projects .container:nth-child(even) .project-description {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -310,7 +314,7 @@ main {
   grid-column: 8 / span 5;
 }
 
-#projects .project-container:nth-child(even) .project-images {
+#projects .container:nth-child(even) .project-images {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -319,7 +323,7 @@ main {
   grid-column: 1 / span 6;
 }
 
-#projects .project-container:nth-child(odd) .project-description {
+#projects .container:nth-child(odd) .project-description {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -328,12 +332,204 @@ main {
   grid-column: 1 / span 5;
 }
 
-#projects .project-container:nth-child(odd) .project-images {
+#projects .container:nth-child(odd) .project-images {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
   -ms-grid-column: 7;
   -ms-grid-column-span: 6;
   grid-column: 7 / span 6;
+}
+
+#experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 90vw;
+  margin: auto;
+  margin-top: 150px;
+}
+
+#experience #clients {
+  width: 100vw;
+  height: 40px;
+  background-image: url("../img/clients-dark.png");
+  background-size: cover;
+  display: block;
+}
+
+#experience .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  width: 100%;
+  padding: 75px 0;
+}
+
+#experience .container #skillset {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1 / span 7;
+}
+
+#experience .container #skillset h5 {
+  margin-bottom: 15px;
+}
+
+#experience .container #skillset ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[25];
+      grid-template-rows: repeat(25, 1fr);
+  height: 100%;
+}
+
+#experience .container #skillset ul li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9375rem;
+}
+
+#experience .container #skillset ul li[data-type="legend"] span {
+  grid-column: span 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.6875rem;
+}
+
+#experience .container #skillset ul li[data-type="legend"] span:first-of-type {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  text-align: left;
+}
+
+#experience .container #skillset ul li[data-type="legend"] span:nth-of-type(3) {
+  text-align: right;
+}
+
+#experience .container #skillset ul li[data-type="heading"] {
+  font-weight: 700;
+}
+
+#experience .container #skillset ul li span {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+#experience .container #skillset ul li hr {
+  content: "";
+  border: 0;
+  display: block;
+  height: 1px;
+  width: 100%;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / span 3;
+  background: repeating-linear-gradient(90deg, #fff, #fff 1px, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 7.13%);
+  position: relative;
+  overflow: visible;
+}
+
+#experience .container #skillset ul li hr:after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-color: white;
+  display: block;
+  position: absolute;
+  top: -5px;
+}
+
+#experience .container #skillset ul li hr.s0:after {
+  left: -5px;
+}
+
+#experience .container #skillset ul li hr.s1:after {
+  left: calc(var(--skills-desktop) - 5px);
+}
+
+#experience .container #skillset ul li hr.s2:after {
+  left: calc(var(--skills-desktop) * 2 - 5px);
+}
+
+#experience .container #skillset ul li hr.s3:after {
+  left: calc(var(--skills-desktop) * 3 - 5px);
+}
+
+#experience .container #skillset ul li hr.s4:after {
+  left: calc(var(--skills-desktop) * 4 - 5px);
+}
+
+#experience .container #skillset ul li hr.s5:after {
+  left: calc(var(--skills-desktop) * 5 - 5px);
+}
+
+#experience .container #skillset ul li hr.s6:after {
+  left: calc(var(--skills-desktop) * 6 - 5px);
+}
+
+#experience .container #skillset ul li hr.s7:after {
+  left: calc(var(--skills-desktop) * 7 - 5px);
+}
+
+#experience .container #skillset ul li hr.s8:after {
+  left: calc(var(--skills-desktop) * 8 - 5px);
+}
+
+#experience .container #skillset ul li hr.s9:after {
+  left: calc(var(--skills-desktop) * 9 - 5px);
+}
+
+#experience .container #skillset ul li hr.s10:after {
+  left: calc(var(--skills-desktop) * 10 - 5px);
+}
+
+#experience .container #skillset ul li hr.s11:after {
+  left: calc(var(--skills-desktop) * 11 - 5px);
+}
+
+#experience .container #skillset ul li hr.s12:after {
+  left: calc(var(--skills-desktop) * 12 - 5px);
+}
+
+#experience .container #skillset ul li hr.s13:after {
+  left: calc(var(--skills-desktop) * 13 - 5px);
+}
+
+#experience .container #skillset ul li hr.s14:after {
+  left: calc(var(--skills-desktop) * 14 - 5px);
+}
+
+#experience .container #history {
+  height: 900px;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9 / span 4;
+  background: red;
 }
 /*# sourceMappingURL=adamfox.css.map */
