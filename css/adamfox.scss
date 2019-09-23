@@ -514,9 +514,119 @@ main {
 		}
 
 		#history {
-			height: 900px;
+			height: 100%;
 			grid-column: 9 / span 4;
-			background: red;
+			min-height: 715px;
+			position: relative;
+
+			> div {
+
+				position: relative;
+				display: grid;
+				grid-template-columns: repeat(10, calc(10% - 10px));
+				grid-template-rows: 1fr;
+				grid-column-gap: 10px;
+				grid-row-gap: 0px;
+				position: absolute;
+				width: 100%;
+
+				&:before {
+					content: "";
+					position: absolute;
+					width: 1px;
+					height: calc(100% - 23px);
+					left: calc(50% - .5px);
+					top: 8px;
+					background-color: var(--secondary-color);
+					grid-column: 4 / span 1;
+				}
+
+				&:after {
+					content: "";
+					grid-column: 4 / span 1;
+					position: absolute;
+					height: 10px;
+					width: 10px;
+					background-color: var(--primary-color);
+					border: 1px solid var(--secondary-color);
+					border-radius: 10px;
+					left: 50%;
+					top: 3px;
+					margin-left: -5.5px;
+				}
+
+				&:nth-of-type(1) {
+					top: 0;
+					height: 42.86%;
+				}
+
+				&:nth-of-type(2) {
+					bottom: 57.14%;
+					align-items: end;
+
+					&:after {
+						top: auto;
+						bottom: 3px;
+					}
+				}
+
+				&:nth-of-type(3) {
+					top: 42.85%;
+					height: calc(28.57% - 30px);
+					padding-top: 30px;
+
+					&:before {
+						height: calc(100% + 30px);
+						top: -3px;
+					}
+
+					&:after {
+						top: 33px;
+					}
+				}
+
+				&:nth-of-type(4) {
+					top: 71.41%;
+					height: 28.57%;
+				}
+
+				&:nth-of-type(5) {
+					align-items: end;
+					bottom: 0;
+
+					&:before {
+						display: none;
+					}
+
+					&:after {
+						top: auto;
+						bottom: 4px;
+					}
+				}
+
+				> p {
+					font-family: 'Lora';
+					font-size: 13px;
+					font-style: italic;
+					grid-column: 1 / span 3;
+					text-align: right;
+				}
+
+				> div {
+					grid-column: 5 / span 6;
+					text-transform: uppercase;
+
+					h5 {
+						font-size: calc(14px + (18 - 14) * ((100vw - 1124px) / (2264 - 1124)));
+						font-weight: 700;
+					}
+
+					p {
+						font-size: 0.9375rem;
+						font-weight: 300;
+					}
+				}
+			}
 		}
 	}
 }
