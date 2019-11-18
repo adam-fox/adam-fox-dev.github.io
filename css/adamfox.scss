@@ -7,19 +7,29 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
  }
 
 ::selection {
-background: rgba(var(--secondary-color), 1);
+background: rgba(var(--secondary-color), .25);
 }
 ::-moz-selection {
-background: rgba(var(--secondary-color), 1);
+background: rgba(var(--secondary-color), .25);
+}
+
+:root {
+	--primary-color: 244, 246, 247;
+	--secondary-color: 57, 61, 79;
+	--tertiary-color: 249, 251, 252;
+	--skills-desktop: 7%;
+	--box-shadow: 0px 50px 100px rgba(57, 61, 79, .1);
+	--icon-mode: url('../img/ico-night.svg');
 }
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--primary-color: 255, 255, 255;
-		--secondary-color: 32, 34, 44;
-		--tertiary-color: 16, 17, 20;
+		--primary-color: 244, 246, 247;
+		--secondary-color: 57, 61, 79;
+		--tertiary-color: 249, 251, 252;
 		--skills-desktop: 7%;
-		--box-shadow: 0px 50px 100px rgba(0, 0, 0, .5);
+		--box-shadow: 0px 50px 100px rgba(57, 61, 79, .1);
+		--icon-mode: url('../img/ico-night.svg');
 	}
  }
 
@@ -30,23 +40,10 @@ background: rgba(var(--secondary-color), 1);
 		--tertiary-color: 16, 17, 20;
 		--skills-desktop: 7%;
 		--box-shadow: 0px 50px 100px #000;
+		--icon-mode: url('../img/ico-day.svg');
 	}
  }
 
-:root {
-    --primary-color: 32, 34, 44;
-	--secondary-color: 240, 246, 250;
-    --tertiary-color: 16, 17, 20;
-	--skills-desktop: 7%;
-	--box-shadow: 0px 50px 100px #000;
-
-	::selection {
-		background: rgba(var(--secondary-color), 1);
-	  }
-	  ::-moz-selection {
-		background: rgba(var(--secondary-color), 1);
-	  }
-}
 
 body {
     background-color: rgba(var(--primary-color), 1);
@@ -116,58 +113,96 @@ button {
 }
 
 header {
-	width: 58px;
-	height: 58px;
-	margin: 60px auto 0 auto;
-	border: 4px solid rgba(var(--secondary-color), 1);
-	border-radius: 100%;
+	width: 100vw;
+	height: 60px;
+	margin: 0 auto;
+	position: absolute;
+	top: 60px;
+	z-index: 1;
 
-	svg {
-		position: absolute;
-		left: 50%;
-		top: 76px;
-		margin-left: -16px;
-		fill: rgba(var(--secondary-color), 1);
+	&.on {
+		position: fixed;
+		width: 100%;
+		margin: 0 auto;
+		top: 0;
+
+		> div {
+			width: 100%;
+			box-shadow: none;
+			background-color: rgba(var(--tertiary-color), 1);
+			border-radius: 0;
+			animation-name: logo_circle-on;
+			animation-duration: .25s;
+			animation-fill-mode: none;
+		}
 	}
 
-	div {
-		width: 90vw;
-		height: 58px;
-		position: absolute;
-		left: 5vw;
-		text-align: right;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		flex-direction: row;
-		
+	&.off {
 
-		a {
-			font-size: .9375em;
-			font-weight: 700;
-			display: block;
-			margin-left: 63px;
-			position: relative;
+		> div {
+			animation-name: logo_circle-off;
+			animation-duration: .25s;
+			animation-fill-mode: none;
+		}
+	}
+	
+	> div {
+		width: 60px;
+		height: 60px;
+		margin: 0 auto;
+		top: 0;
+		box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+		border-radius: 60px;
+
+		svg {
+			position: absolute;
+			left: 50%;
+			top: 13px;
+			margin-left: -16px;
+			fill: rgba(var(--secondary-color), 1);
+			cursor: pointer;
+			z-index: 1;
+		}
+
+		> div {
+			width: 90vw;
+			height: 60px;
+			position: absolute;
+			left: 5vw;
+			text-align: right;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex-direction: row;
 			
-			&:nth-of-type(1) {
-				width: 18px;
-				height: 18px;
-				overflow: hidden;
-				text-indent: 18px;
-				mask-image: url('../img/ico-day.svg');
-				background-color: rgba(var(--secondary-color), 1);
-			}
 
-			&:nth-of-type(2):before {
-				height: 18px;
-				width: 18px;
-				content: "";
+			a {
+				font-size: .9375em;
+				font-weight: 700;
 				display: block;
-				mask-image: url('../img/ico-chat.svg');
-				background-color: rgba(var(--secondary-color), 1);
-				left: -23px;
-				position: absolute;
+				margin-left: 63px;
+				position: relative;
+				
+				&:nth-of-type(1) {
+					width: 18px;
+					height: 18px;
+					overflow: hidden;
+					text-indent: 18px;
+					mask-image: var(--icon-mode);
+					background-color: rgba(var(--secondary-color), 1);
+				}
 
+				&:nth-of-type(2):before {
+					height: 18px;
+					width: 18px;
+					content: "";
+					display: block;
+					mask-image: url('../img/ico-chat.svg');
+					background-color: rgba(var(--secondary-color), 1);
+					left: -23px;
+					position: absolute;
+
+				}
 			}
 		}
 	}
@@ -178,6 +213,7 @@ main {
 }
 
 #intro {
+	margin-top: 120px;
     text-align: center;
 	height: calc(100vh - 260px);
 	min-height: 450px;
@@ -279,7 +315,7 @@ main {
                 margin: 0px auto;
 
                 >div {
-                    background-color: rgba(var(--secondary-color), 1);
+                    background-color: white;
 					border-radius: 20px;
 					box-shadow: var(--box-shadow);
 					position: relative;
@@ -838,8 +874,8 @@ footer {
 							transform: translatex(2px) translatey(-2px);
 							border-top: 1px solid rgba(var(--secondary-color), 1);
 							border-right: 1px solid rgba(var(--secondary-color), 1);
-							box-shadow: 0 0 0 2px rgba(var(--primary-color), 1);
-							background:rgba(var(--primary-color), 1);
+							box-shadow: 0 0 0 2px rgba(var(--tertiary-color), 1);
+							background:rgba(var(--tertiary-color), 1);
 							animation-duration: 2s;
 							animation-iteration-count: infinite;
 						}
@@ -868,17 +904,49 @@ footer {
 		position: absolute;
 		right: 0;
 		bottom: 0;
+		overflow: visible;;
 
 		&:before {
 			content: '';
 			width: 40px;
 			height: 40px;
 			mask-image: url(/img/logo-footer.svg);
+			mask-size: 40px 40px;
 			background-color: rgba(var(--secondary-color), 1);
 			display: block;
 			position: absolute;
 			top: -50px;
 			left: calc(50% - 20px);
 		}
+	}
+}
+
+@keyframes logo_circle-on {
+    0% {
+		background-color: rgba(var(--tertiary-color), 0);
+		box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+		border-radius: 60px;
+		width: 60px;
+	}
+	100% {
+		background-color: rgba(var(--tertiary-color), 1);
+		box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+		border-radius: 0px;
+		width: 100%;
+	}
+}
+
+@keyframes logo_circle-off {
+    0% {
+		background-color: rgba(var(--tertiary-color), 1);
+		box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+		border-radius: 0px;
+		width: 100%;
+	}
+	100% {
+		background-color: rgba(var(--tertiary-color), 0);
+		box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+		border-radius: 60px;
+		width: 60px;
 	}
 }

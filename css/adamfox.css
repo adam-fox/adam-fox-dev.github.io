@@ -7,24 +7,34 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 ::-moz-selection {
-  background: rgba(var(--secondary-color), 1);
+  background: rgba(var(--secondary-color), 0.25);
 }
 
 ::selection {
-  background: rgba(var(--secondary-color), 1);
+  background: rgba(var(--secondary-color), 0.25);
 }
 
 ::-moz-selection {
-  background: rgba(var(--secondary-color), 1);
+  background: rgba(var(--secondary-color), 0.25);
+}
+
+:root {
+  --primary-color: 244, 246, 247;
+  --secondary-color: 57, 61, 79;
+  --tertiary-color: 249, 251, 252;
+  --skills-desktop: 7%;
+  --box-shadow: 0px 50px 100px rgba(57, 61, 79, .1);
+  --icon-mode: url('../img/ico-night.svg');
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --primary-color: 255, 255, 255;
-    --secondary-color: 32, 34, 44;
-    --tertiary-color: 16, 17, 20;
+    --primary-color: 244, 246, 247;
+    --secondary-color: 57, 61, 79;
+    --tertiary-color: 249, 251, 252;
     --skills-desktop: 7%;
-    --box-shadow: 0px 50px 100px rgba(0, 0, 0, .5);
+    --box-shadow: 0px 50px 100px rgba(57, 61, 79, .1);
+    --icon-mode: url('../img/ico-night.svg');
   }
 }
 
@@ -35,27 +45,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     --tertiary-color: 16, 17, 20;
     --skills-desktop: 7%;
     --box-shadow: 0px 50px 100px #000;
+    --icon-mode: url('../img/ico-day.svg');
   }
-}
-
-:root {
-  --primary-color: 32, 34, 44;
-  --secondary-color: 240, 246, 250;
-  --tertiary-color: 16, 17, 20;
-  --skills-desktop: 7%;
-  --box-shadow: 0px 50px 100px #000;
-}
-
-:root ::-moz-selection {
-  background: rgba(var(--secondary-color), 1);
-}
-
-:root ::selection {
-  background: rgba(var(--secondary-color), 1);
-}
-
-:root ::-moz-selection {
-  background: rgba(var(--secondary-color), 1);
 }
 
 body {
@@ -124,24 +115,67 @@ button {
 }
 
 header {
-  width: 58px;
-  height: 58px;
-  margin: 60px auto 0 auto;
-  border: 4px solid rgba(var(--secondary-color), 1);
-  border-radius: 100%;
+  width: 100vw;
+  height: 60px;
+  margin: 0 auto;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
 }
 
-header svg {
+header.on {
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+}
+
+header.on > div {
+  width: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: rgba(var(--tertiary-color), 1);
+  border-radius: 0;
+  -webkit-animation-name: logo_circle-on;
+          animation-name: logo_circle-on;
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+header.off > div {
+  -webkit-animation-name: logo_circle-off;
+          animation-name: logo_circle-off;
+  -webkit-animation-duration: .25s;
+          animation-duration: .25s;
+  -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+}
+
+header > div {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  top: 0;
+  -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+          box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+  border-radius: 60px;
+}
+
+header > div svg {
   position: absolute;
   left: 50%;
-  top: 76px;
+  top: 13px;
   margin-left: -16px;
   fill: rgba(var(--secondary-color), 1);
+  cursor: pointer;
+  z-index: 1;
 }
 
-header div {
+header > div > div {
   width: 90vw;
-  height: 58px;
+  height: 60px;
   position: absolute;
   left: 5vw;
   text-align: right;
@@ -160,7 +194,7 @@ header div {
           flex-direction: row;
 }
 
-header div a {
+header > div > div a {
   font-size: .9375em;
   font-weight: 700;
   display: block;
@@ -168,17 +202,17 @@ header div a {
   position: relative;
 }
 
-header div a:nth-of-type(1) {
+header > div > div a:nth-of-type(1) {
   width: 18px;
   height: 18px;
   overflow: hidden;
   text-indent: 18px;
-  -webkit-mask-image: url("../img/ico-day.svg");
-          mask-image: url("../img/ico-day.svg");
+  -webkit-mask-image: var(--icon-mode);
+          mask-image: var(--icon-mode);
   background-color: rgba(var(--secondary-color), 1);
 }
 
-header div a:nth-of-type(2):before {
+header > div > div a:nth-of-type(2):before {
   height: 18px;
   width: 18px;
   content: "";
@@ -195,6 +229,7 @@ main {
 }
 
 #intro {
+  margin-top: 120px;
   text-align: center;
   height: calc(100vh - 260px);
   min-height: 450px;
@@ -325,7 +360,7 @@ main {
 }
 
 #projects .container .project-images > div > div {
-  background-color: rgba(var(--secondary-color), 1);
+  background-color: white;
   border-radius: 20px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
@@ -876,9 +911,9 @@ footer div ul li a i:before {
           transform: translatex(2px) translatey(-2px);
   border-top: 1px solid rgba(var(--secondary-color), 1);
   border-right: 1px solid rgba(var(--secondary-color), 1);
-  -webkit-box-shadow: 0 0 0 2px rgba(var(--primary-color), 1);
-          box-shadow: 0 0 0 2px rgba(var(--primary-color), 1);
-  background: rgba(var(--primary-color), 1);
+  -webkit-box-shadow: 0 0 0 2px rgba(var(--tertiary-color), 1);
+          box-shadow: 0 0 0 2px rgba(var(--tertiary-color), 1);
+  background: rgba(var(--tertiary-color), 1);
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -907,6 +942,7 @@ footer span {
   position: absolute;
   right: 0;
   bottom: 0;
+  overflow: visible;
 }
 
 footer span:before {
@@ -915,10 +951,80 @@ footer span:before {
   height: 40px;
   -webkit-mask-image: url(/img/logo-footer.svg);
           mask-image: url(/img/logo-footer.svg);
+  -webkit-mask-size: 40px 40px;
+          mask-size: 40px 40px;
   background-color: rgba(var(--secondary-color), 1);
   display: block;
   position: absolute;
   top: -50px;
   left: calc(50% - 20px);
+}
+
+@-webkit-keyframes logo_circle-on {
+  0% {
+    background-color: rgba(var(--tertiary-color), 0);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+    border-radius: 60px;
+    width: 60px;
+  }
+  100% {
+    background-color: rgba(var(--tertiary-color), 1);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+    border-radius: 0px;
+    width: 100%;
+  }
+}
+
+@keyframes logo_circle-on {
+  0% {
+    background-color: rgba(var(--tertiary-color), 0);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+    border-radius: 60px;
+    width: 60px;
+  }
+  100% {
+    background-color: rgba(var(--tertiary-color), 1);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+    border-radius: 0px;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes logo_circle-off {
+  0% {
+    background-color: rgba(var(--tertiary-color), 1);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+    border-radius: 0px;
+    width: 100%;
+  }
+  100% {
+    background-color: rgba(var(--tertiary-color), 0);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+    border-radius: 60px;
+    width: 60px;
+  }
+}
+
+@keyframes logo_circle-off {
+  0% {
+    background-color: rgba(var(--tertiary-color), 1);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 0);
+    border-radius: 0px;
+    width: 100%;
+  }
+  100% {
+    background-color: rgba(var(--tertiary-color), 0);
+    -webkit-box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+            box-shadow: inset 0 0 0 4px rgba(var(--secondary-color), 1);
+    border-radius: 60px;
+    width: 60px;
+  }
 }
 /*# sourceMappingURL=adamfox.css.map */
