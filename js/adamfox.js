@@ -1,8 +1,5 @@
 $("#btn-theme").click(function() {
-	let root = document.documentElement;
-	root.style.setProperty('--primary-color', '240, 246, 250');
-	root.style.setProperty('--secondary-color', '32, 34, 44');
-	root.style.setProperty('--tertiary-color', '16, 17, 20');
+	activateDarkMode();
 });
 
 function activateDarkMode() {

@@ -13,7 +13,7 @@ background: rgba(var(--secondary-color), 1);
 background: rgba(var(--secondary-color), 1);
 }
 
- @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
 	:root {
 		--primary-color: 255, 255, 255;
 		--secondary-color: 32, 34, 44;
